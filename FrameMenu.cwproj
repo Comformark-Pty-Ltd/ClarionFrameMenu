@@ -1,0 +1,58 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{CF6E57F0-4E7A-45C6-A339-ED024B6CFAA3}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Win32</Platform>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>FrameMenu</RootNamespace>
+    <AssemblyName>FrameMenu</AssemblyName>
+    <OutputName>FrameMenu</OutputName>
+    <CWOutputType>Exe</CWOutputType>
+    <DefineConstants>_ABCDllMode_=&gt;0%3b_ABCLinkMode_=&gt;1</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <vid>full</vid>
+    <check_stack>True</check_stack>
+    <check_index>True</check_index>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <vid>off</vid>
+    <check_stack>False</check_stack>
+    <check_index>False</check_index>
+  </PropertyGroup>
+  <ItemGroup>
+    <FileDriver Include="TOPSPEED" />
+    <Compile Include="FrameMenu.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="FrameMenu001.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="FrameMenu002.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="FrameMenu003.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="FrameMenu004.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="FrameMenu005.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="FrameMenu006.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="FRAMEMENU_BC.CLW">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="FrameMenu_BC0.CLW">
+      <Generated>true</Generated>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(ClarionBinPath)\SoftVelocity.Build.Clarion.targets" />
+</Project>
